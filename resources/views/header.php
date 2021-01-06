@@ -28,7 +28,7 @@
           <li><a href="index" accesskey="1" title="Home">Home</a></li>
           <li><a href="food" accesskey="2" title="Food">Food</a></li>
           <li><a href="commodity" accesskey="3" title="Commodity">Commodity</a></li>
-          <li><a href="shopping_cart" accesskey="4" title="Shopping cart">Shopping cart</a></li>
+          <li><a href="list" accesskey="4" title="List">Shopping cart</a></li>
           <li><a href="about" accesskey="5" title="About Us">About Us</a></li>
         </ul>
       </div>

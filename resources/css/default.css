@@ -542,3 +542,26 @@ td:nth-child(3) {
     border-color: #eea236;
     transition: 0.8s;
 }
+
+
+
+/*********************************************************************************/
+/* List                                                                       */
+/*********************************************************************************/
+
+
+/* .list table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .list table td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .list table tr:nth-child(even) {
+    background-color: #dddddd;
+  } */

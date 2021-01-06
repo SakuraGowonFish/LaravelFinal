@@ -34,4 +34,4 @@ echo "<p>新增成功!</p>";
 
 
 
-echo "<meta http-equiv='Refresh'  content='0;url=/public/food'>";
+echo "<meta http-equiv='Refresh' content='0;url=/public/food'>";

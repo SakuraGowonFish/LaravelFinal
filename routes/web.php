@@ -117,6 +117,6 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/shopping_cart', function () {
-    return view('shopping_cart');
+Route::get('/list', function () {
+    return view('list');
 });
