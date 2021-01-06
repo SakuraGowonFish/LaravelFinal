@@ -74,4 +74,4 @@
 
 <?php require_once 'cart.php' ?>
 <?php require_once 'footer.php' ?>
-<?php require_once 'addToCart.php' ?>
+<?php require_once 'addCart.php' ?>

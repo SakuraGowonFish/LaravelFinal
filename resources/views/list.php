@@ -30,7 +30,7 @@ $result = mysqli_query($link, $sql);
 if ($result->num_rows > 0) {
     echo "<div id='page' class='container, list'>
     <div class='title'>
-        <h2>List</h2>
+        <h2>CLHL List</h2>
     </div>
     <table>
         <tr>
@@ -41,7 +41,6 @@ if ($result->num_rows > 0) {
         </tr>";
     // output data of each row
     while ($row = $result->fetch_assoc()) {
-        // echo ("ID: " . $row["EmployeeID"] .", 姓名: " . $row["EName"]. "<br>");
         echo "<tr><td>" . $row["id"] . "</td><td>" . $row["name"] . "</td><td>" . $row["num"] . "</td><td>" . $row["cost"] . "</td></tr>";
     }
     echo "</table></div>";

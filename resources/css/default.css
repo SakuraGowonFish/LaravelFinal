@@ -549,14 +549,24 @@ td:nth-child(3) {
 /* List                                                                       */
 /*********************************************************************************/
 
+.list{
+    margin: 0em auto;
+}
 
-/* .list table {
+.list table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
   }
-  
-  .list table td, th {
+
+  .list table th{
+    border-top: 2px solid black;
+    font-size: 20px;
+    text-align: left;
+    padding: 8px;
+  }
+
+  .list table td{
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
@@ -564,4 +574,4 @@ td:nth-child(3) {
   
   .list table tr:nth-child(even) {
     background-color: #dddddd;
-  } */
+  }

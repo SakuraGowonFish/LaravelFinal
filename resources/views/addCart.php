@@ -2,15 +2,17 @@
 <script type="text/javascript">
     var list = []; //創一個空陣列將選購資料放入
     var total = 0; //本次購買的總金額
+
+
     $("#cartTotal").html(total);
     $('#page div a').click(function() {
         /* 抓取商品的資訊與購買數量 */
         var item = $(this).prev().prev().prev().text();
         var num = $(this).next().val()
         var cost = $(this).prev().prev().text() * num;
-        console.log(item);
-        console.log(cost);
-        console.log(num);
+        // console.log(item);
+        // console.log(cost);
+        // console.log(num);
 
         if (num == 0) {
             alert("請先選擇「數量」再按購買唷");
@@ -27,6 +29,8 @@
 
         list.push(item + "," + num + "," + cost);
         console.log(list);
+
+
     });
 
     function pushCart() { //下單
@@ -51,5 +55,3 @@
         $("#cartTotal").html(total);
     };
 </script>
-
-

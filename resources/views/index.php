@@ -5,7 +5,8 @@
 
 <div id="page" class="container">
 
-  <h1>Welcome To CLHL</h1>
+  <h1>Welcome To CLHL</h1><br>
+  <div>Here are delicious and fun products, come and buy. Promise not to regret</div>
 
 </div>
 

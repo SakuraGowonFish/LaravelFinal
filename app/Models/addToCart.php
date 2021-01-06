@@ -22,12 +22,13 @@ mysqli_set_charset($link, "utf8");  //設定查詢結果為utf8
 
 // $food1 = $_POST["food1"];
 
-
-// var_dump("你好");
-// echo "$food1";
+$engWord = filter_input(INPUT_POST, "engWord");
+$chiWord = filter_input(INPUT_POST, "chiWord");
+$owner = filter_input(INPUT_POST, "owner");
+$count = filter_input(INPUT_POST, "count");
 
 $sql = "INSERT INTO cart (id, name, num, cost)values 
-    ('F1', '南瓜咖哩魚片', 1, 120)";
+    (1, '南瓜咖哩魚片', 1, 120)";
 var_dump($sql);
 mysqli_query($link, $sql);
 echo "<p>新增成功!</p>";
@@ -35,3 +36,4 @@ echo "<p>新增成功!</p>";
 
 
 echo "<meta http-equiv='Refresh' content='0;url=/public/food'>";
+?>
