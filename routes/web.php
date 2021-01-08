@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InspiringController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\FoodController;
 use App\Models\Subject;
 // use Auth;
 
@@ -105,9 +106,12 @@ Route::get('/index', function () {
     return view('index');
 });
 
-Route::get('/food', function () {
-    return view('food');
-});
+
+Route::get('/food',  [FoodController::class, 'page']);
+
+// Route::get('/food', function(){
+//     return view('food');
+// });
 
 Route::get('/commodity', function () {
     return view('commodity');

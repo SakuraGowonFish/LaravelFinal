@@ -575,3 +575,7 @@ td:nth-child(3) {
   .list table tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+  .hide{
+      display: none;
+  }

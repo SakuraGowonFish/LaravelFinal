@@ -11,29 +11,30 @@ $link = mysqli_connect(DB_Server, DB_User, DB_Password, DB_Database);
 if (!$link) {
     die("連接失敗" . mysqli_connect_error()); //輸出資料庫連接錯誤
 } else {
-    echo "Success!!!<br>";  //輸出資料庫連接成功
+    // echo "Success!!!<br>";  //輸出資料庫連接成功
 }
 mysqli_set_charset($link, "utf8");  //設定查詢結果為utf8
 
 
-// $name = list[0];
-// $num = list[1];
-// $total = list[2];
+$id = filter_input(INPUT_POST, "id");
+$name = filter_input(INPUT_POST, "name");
+$num = filter_input(INPUT_POST, "num");
+$cost = filter_input(INPUT_POST, "cost");
+$total = filter_input(INPUT_POST, "total");
+$now = filter_input(INPUT_POST, "now");
 
-// $food1 = $_POST["food1"];
-
-$engWord = filter_input(INPUT_POST, "engWord");
-$chiWord = filter_input(INPUT_POST, "chiWord");
-$owner = filter_input(INPUT_POST, "owner");
-$count = filter_input(INPUT_POST, "count");
-
-$sql = "INSERT INTO cart (id, name, num, cost)values 
-    (1, '南瓜咖哩魚片', 1, 120)";
+//這邊將資料移動至購物車內
+$sql = "INSERT INTO cart values 
+    ('$id', '$name', '$num', '$cost', null)";
 var_dump($sql);
 mysqli_query($link, $sql);
-echo "<p>新增成功!</p>";
 
 
+//bill
+$sql_bill = "INSERT INTO bill values 
+    (null, '$total', '$now')";
+var_dump($sql_bill);
+mysqli_query($link, $sql_bill);
+mysqli_close($link); //關閉資料庫連接
 
 echo "<meta http-equiv='Refresh' content='0;url=/public/food'>";
-?>
