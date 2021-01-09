@@ -20,14 +20,48 @@ if (!$link) {
 
 mysqli_set_charset($link, "utf8");
 
-$sql = "SELECT * FROM cart, bill"; //在test資料表中選擇所有欄位
+$sql = "SELECT * FROM cart"; //在test資料表中選擇所有欄位
 $result = mysqli_query($link, $sql);
 
+$sql_bill = "SELECT * FROM bill"; //在test資料表中選擇所有欄位
+$result_bill = mysqli_query($link, $sql_bill);
+
+if ($result_bill->num_rows > 0) {
+    echo "
+    <div id='page' class='container, list'>
+        <div class='title'>
+            <h2>CLHL Bill</h2>
+        </div>
+        <table>
+            <tr>
+                <th>訂單編號</th>
+                <th>總額</th>
+                <th>下單時間</th>
+            </tr>";
+    // output data of each row
+    while ($row = $result_bill->fetch_assoc()) {
+        echo "<tr><td width='50%'>" . $row["bill_uuid"] .
+            "</td><td width='20%'>" . $row["bill_total"] .
+            "</td><td width='30%'>" . $row["bill_date"] .
+            "</td></tr>";
+    }
+    echo "</table></div>";
+} else {
+    echo "
+    <div id='page' class='container, list'>
+        <div class='title'>
+            <h2>目前沒有任何訂單唷</h2>
+        </div>
+    </div>";
+}
+
+
+//詳細每筆資料
 if ($result->num_rows > 0) {
     echo "
     <div id='page' class='container, list'>
         <div class='title'>
-            <h2>CLHL List</h2>
+            <h2>CLHL Shopping Cart</h2>
         </div>
         <table>
             <tr>
@@ -39,10 +73,12 @@ if ($result->num_rows > 0) {
             </tr>";
     // output data of each row
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["id"] . "</td><td>" . $row["name"] . 
-        "</td><td>" . $row["num"] . "</td><td>" . $row["cost"] . 
-        "</td><td>" . $row["billID"] .
-         "</td></tr>";
+        echo "<tr><td width='10%'>" . $row["id"] .
+            "</td><td width='20%'>" . $row["name"] .
+            "</td><td width='5%'>" . $row["num"] .
+            "</td><td width='10%'>" . $row["cost"] .
+            "</td><td width='50%'>" . $row["billID"] .
+            "</td></tr>";
     }
     echo "</table></div>";
 } else {

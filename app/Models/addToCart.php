@@ -35,6 +35,6 @@ $sql_bill = "INSERT INTO bill values
     (null, '$total', '$now')";
 var_dump($sql_bill);
 mysqli_query($link, $sql_bill);
-mysqli_close($link); //關閉資料庫連接
+// mysqli_close($link); //關閉資料庫連接
 
 echo "<meta http-equiv='Refresh' content='0;url=/public/food'>";

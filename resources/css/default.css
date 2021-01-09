@@ -516,7 +516,8 @@ td:nth-child(3) {
     margin: 0px;
 }
 
-#cart input[type="submit"], input[type="button"]{
+#cart input[type="submit"],
+input[type="button"] {
     width: 100px;
     height: 40px;
     font-size: 18px;
@@ -525,7 +526,7 @@ td:nth-child(3) {
     background-color: #0099ff;
 }
 
-#cart .cartTable input[type="text"]{
+#cart .cartTable input[type="text"] {
     width: 1.5em;
 }
 
@@ -543,13 +544,15 @@ td:nth-child(3) {
     transition: 0.8s;
 }
 
-
+.hide {
+    display: none;
+}
 
 /*********************************************************************************/
 /* List                                                                       */
 /*********************************************************************************/
 
-.list{
+.list {
     margin: 0em auto;
 }
 
@@ -557,25 +560,26 @@ td:nth-child(3) {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-  }
+}
 
-  .list table th{
+.list table th {
     border-top: 2px solid black;
     font-size: 20px;
     text-align: left;
     padding: 8px;
-  }
+}
 
-  .list table td{
+.list table td {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-  }
-  
-  .list table tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+    height: 35px;
+}
 
-  .hide{
-      display: none;
-  }
+.list table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.title {
+    cursor: pointer;
+}

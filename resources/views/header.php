@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" />
   <link rel="stylesheet" href="/resources/css/default.css" />
   <link rel="stylesheet" href="/resources/css/fonts.css" />
+  <link rel="Shortcut Icon" type="image/x-icon" href="/resources/images/smlogo.png">
 
 
 </head>
@@ -28,7 +29,7 @@
           <li><a href="index" accesskey="1" title="Home">Home</a></li>
           <li><a href="food" accesskey="2" title="Food">Food</a></li>
           <li><a href="commodity" accesskey="3" title="Commodity">Commodity</a></li>
-          <li><a href="list" accesskey="4" title="List">List</a></li>
+          <li><a href="bill" accesskey="4" title="Bill">bill</a></li>
           <li><a href="about" accesskey="5" title="About Us">About Us</a></li>
         </ul>
       </div>

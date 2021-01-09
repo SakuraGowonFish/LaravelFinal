@@ -2,6 +2,10 @@
 <script type="text/javascript">
     var list = []; //創一個空陣列將選購資料放入
     var total = 0; //本次購買的總金額
+    var listID = [];
+    var listItem = [];
+    var listNum = [];
+    var listCost = [];
 
 
     $("#cartTotal").html(total);
@@ -15,7 +19,7 @@
         if (num == 0) {
             alert("請先選擇「數量」再按購買唷");
         } else {
-            str = "<tr><span class='id, hide'>" + id +
+            str = "<tr>" + "<span class='id'>" + id +
                 "</span><td class='item'>" + item +
                 "</td><td class='num'>" + num +
                 "</td><td class='cost'>" + cost + "</td></tr>"
@@ -26,36 +30,32 @@
         total += cost; //計算合計總金額
         $("#cartTotal").html(total);
 
-        list.push(id + "," + item + "," + num + "," + cost);
-        console.log(list);
+        // list.push(id + "," + item + "," + num + "," + cost);
+        list.push(id, item, num, cost);
+        listID.push(id);
+        listItem.push(item);
+        listNum.push(num);
+        listCost.push(cost);
+        // console.log(list);
     });
 
     function pushCart() { //下單
         //無法建置bill
 
-        for (var i = 0; i < list.length; i++) {
-            // console.log(list);
+        for (var i = 0; i < list.length / 4; i++) {
             // var id = $("tr:last-child .id").text();
             var idC = $("tr:last-child .id").text();
             var itemC = $("tr:last-child .item").text();
             var numC = $("tr:last-child .num").text()
             var costC = $("tr:last-child .cost").text();
-            console.log(idC);
-            console.log(itemC);
-            console.log(numC);
-            console.log(costC);
-
 
             var params = {
-                id: list[i][0] + list[i][1],
-                name: itemC,
-                num: numC,
-                cost: costC
+                id: listID[i],
+                name: listItem[i],
+                num: listNum[i],
+                cost: listCost[i]
             };
 
-            itemC = "";
-            numC = "";
-            costC = "";
 
             console.log(params);
             var myUrl = "/app/Models/addToCart.php";
@@ -79,10 +79,11 @@
         }
 
 
+        //bill
         var date = new Date();
         var yy = date.getFullYear();
-        var mm = date.getDate();
-        var dd = date.getDay();
+        var mm = date.getMonth() + 1;
+        var dd = date.getDate();
         var hh = date.getHours();
         var mn = date.getMinutes();
         var ss = date.getSeconds();
@@ -130,10 +131,4 @@
         list = [];
         $("#cartTotal").html(total);
     };
-
-    $('#qaq').click(function() {
-
-
-
-    });
 </script>

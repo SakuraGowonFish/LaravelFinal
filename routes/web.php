@@ -121,6 +121,6 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/list', function () {
-    return view('list');
+Route::get('/bill', function () {
+    return view('bill');
 });
