@@ -37,4 +37,4 @@ var_dump($sql_bill);
 mysqli_query($link, $sql_bill);
 // mysqli_close($link); //關閉資料庫連接
 
-echo "<meta http-equiv='Refresh' content='0;url=/public/food'>";
+echo "<meta http-equiv='Refresh' content='0;url=/public/bill'>";
